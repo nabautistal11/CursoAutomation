@@ -1,0 +1,27 @@
+Tipos de datos en Java
+    Rango = cantidad de bytes
+    Primitivos
+        boolean 1 o 0
+
+        tipo | bytes | Rango
+     # ------------------------------------------
+        char    1   ASCII
+        byte    1   -128 a 127
+        int     4   –2 147 483 648 a 2 147 483 647
+        short   2   –32 768 a 32 767
+        long    8   –9 223 372 036 854 775 808 a 9 223 372 036 854 775 807
+
+        float   4   1.40239846e-45f a 3.40282347e+38f
+        double  8   4.94065645841246544e-324 to 1.79769313486231570e+308
+
+    No primitivos - De objeto - Tipo referencia
+        Strings
+        Arrays
+        Classes
+
+
+  Clase nueva
+    Atributos
+    Metodos
+    Encapsularlo
+    Get y sets

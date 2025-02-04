@@ -1,0 +1,364 @@
+Workshop Automation
+
+Proceso de desarrollo de software
+    diseño
+    codificacion
+    Mantenimiento
+    Proteccion
+
+    Objetivo: Creacion de software para ser ejecutados
+
+Practicas: TDD, BDD, ATDD
+
+TDD
+    Construir la prueba
+    luego crear el codigo
+    Refactorizar
+        Ajustar prueba y codigo
+    Se repite el ciclo
+        Test unitarios
+
+BDD - Desarrollo guiado por comportamientos
+    Capturar el comportamiento de una persona
+        Que puede y no puede hacer
+        Objetivo del escenario
+        generar valor a negocio
+    Crear escenario
+    Codificar para resolver el escenario
+        Creacion del bug en caso de que ocurra
+    Refactorizar
+        Corregir
+    Repetir el ciclo
+
+    Antecedente y Consecuencia
+
+    Plasmar el comportamiento de los usuarios en los escenarios
+
+
+
+ATDD - Desarrollo guiado por las pruebas de aceptacion
+    UAT
+        Diseñadas a partir de los requerimientos del sistemas
+        Realizacion de demos
+        Es conveniente validar los casos de prueba con el cliente
+
+    Continuos Testing -> UAT 100% Automatizadas
+    Integracion continuo
+    Entrega continuo
+    Despliegue continuo
+
+Piramide de pruebas - Mike Cohn
+    niveles de pruebas
+    Smoke test
+      *    UI    ATDD -> Para salir a produccion
+     ***  API   BDD
+    ***** Unitarias TDD
+
+El numero de pruebas esta directamente relacionado a la posicion en la piramide
+
+Escenario definidos en las historias de usuario deben ser automatizables
+
+
+CI, CD, CT
+    devops
+        Despliegue sin intervencion humana
+        Niveles de madurez
+        Todo en codigo
+
+    Continuos Integration CI
+        Codigo nuevo al repositorio
+        Pruebas Unitarias
+        Sonar -> Analisis estatico
+        Integrar los cambios hasta -> Ambiente de Desarrollo
+
+    Continuos delivery CD
+        CI +
+            Incluye
+                Pruebas de intregracion, API, UI -> Madurez de las pruebas automatizadas
+                Despliegue a Stage Automatizado
+                Despliegue Manual a produccion
+
+    Continuos Deployment
+        CI + CD
+            Inclusion de pruebas de UAT
+            Despliegue Automatizado a prod
+
+    Continuos Testing CT
+        Data
+            Creacion
+            Disponibilizacion
+
+
+Gestores de proyectos de software
+    Gestion
+        Dependencias
+        Versionamiento
+        Automatizacion
+        Ciclo de vida
+        repositorios
+
+
+    Maven
+        Tiempo de construccion lento en comparacion con Gradle
+        Scripts mas largos en comparacion con gradle
+        Utiliza XML
+        Se basa en objetivos vinculados al proyecto
+        No permite compilaciones incrementales
+        Soporte en la mayoria de herramientas de integracion continua
+
+    Gradle
+        Tiempo de construccion corto y rapido
+        Scripts cortos y limpios
+        Utiliza DSL similar a JSON - Groovy
+        Se basa en tareas
+        Permite compilaciones incrementales de la clase java
+        Soporte en la mayoria de herramientas de integracion continua
+
+
+Intellij
+    New > Project
+    Lenguaje: Java
+    Build system: Gradle
+    DSL: Groovy
+
+    GroupId
+    ArtifactId
+        Paquete > Carpetas
+
+    Buscar libreria
+        Maven central
+
+    build.gradle
+        configuracion del proyecto
+        librerias
+        tareas
+
+    pom.xml
+        Maven
+
+    Nueva clase
+        psvm -> public static void main
+        punto de inicio
+
+
+Java
+    JVM > Java Virtual Machine
+    Traduce codigo
+        .java > compilacion javac > .class > JVM > binario - Segun la plataforma
+
+Principios POO
+
+    Abstraccion
+        Pasar un objeto del mundo real al mundo digital
+        Sacar los objetos de mundo real
+
+        Objeto: Bus
+            Plantilla
+                Atributos -> Caracteristicas
+                Metodos -> Funciones o acciones
+
+        Moto
+            Color
+            Modelo
+            Cilindraje
+
+         Avion
+            Tipo
+            Turbinas
+
+    Clase:
+        Plantilla
+
+    Intellij
+        Crear clase: New > Java class
+        Definir atributos y metodos
+
+Clases
+    Atributos asignan valores
+    = operador de asignacion
+
+    tipo de dato usado en el atributo esta relacionado con la carateristica
+    acotar el atributo por medio del tipo de dato
+
+    Encapsulamiento
+    Herencia
+    Polimorfismo
+
+Variables
+    Atributos
+    Representacion de un espacio en de acuerdo con el tipo de dato
+    Tipo predefinido
+
+Tipos de datos en Java
+    Dominio
+    Rango
+    Primitivos: En miniscula
+        Booleano
+        Caracter
+        Entero
+        Flotante
+    No primitivos: En Mayuscula
+        String
+        Clases
+        Arrays:
+            Conjunto de datos que se almacenan en una misma variable
+            Arranca desde cero
+            Teoria de conjuntos
+            Ordenado
+            Arreglos genericos: Diferentes tipos de datos
+            Areglos de una o n dimensiones
+
+
+New
+    Crear instancia de una clase
+    Reserva espacio en memoria = almacenar clase
+    Clase = Plantilla
+    inicializacion de objetos
+
+
+
+Tipos de almacenamiento de un PC
+    Principal: RAM - Poner en memoria, crear una instancia de memoria
+
+    Secundario: HDD - Respaldo informacion
+
+    Temporalidad de la informacion
+
+    optimizar el manejo de la memoria escogiendo bien el tipo de dato
+    Cuando se trabaja sobre el archivo se esta usando la memoria ram
+        El que se puede manipular
+        Llevarlo a memoria
+
+Inicializar un objeto = instancia
+        Poner en memoria RAM
+
+Clase para crear un objeto
+    Objeto = Instancia de memoria
+
+
+Modificadores de acceso
+
+Para las clases solo es: Default y public
+
+Variables, Metodos, atributos y constructores:
+
+ Visibilidad                      | public | protected       | Default | Private
+----------------------------------------------------------------------------------
+ Misma clase                      | Si     |     Si          |   Si    | Si
+ Cualquier clase mismo paquete    | Si     | Si              | Si      | No
+ Subclase mismo paquete           | Si     | Si              |  Si     | No
+Subclase fuera del mismo paquete  | Si     | Si por herencia | No      | No
+Cualquier clase fuera del paquete | Si     |    No           |  No     | No
+
+
+Encapsulamiento
+    Proteger las variables
+    Metodos de acceso para su modificacion (Set) y leer (Get)
+    atributos privados
+    para no usarlos de forma directa
+    Generate > Getters and Setters
+
+This -> Esta clase
+
+
+Buenas practicas para escribir codigo en Java -> Guia estilos
+    Clases, Interfaces -> En mayuscula inicial
+        Interfaces: Plantilla
+    atributos -> Minuscula
+
+   Final -> No se permitira modificar, variable estatica
+        Constantes
+   Comportamiento en memoria
+   static = Se crea en el momento que arranca el programa
+            Espacio estatico en la memoria ram desde que arranca el programa
+            Pertenece a la clase no a su instancia
+            Usos: Variables de entorno, uso sin instancia
+                Atributos: uso sin instancia
+                Metodos: Static uso sin instancia, punto de inicio, punto de arranque
+   instacia = se crea en el momento que se crea la instancia el espacio en la memoria
+
+    scope variables
+
+    Metodo static: Necesita variables static
+
+SOLID
+    Responsabilidad Unica
+        Funciones con responsabilidad unica
+
+Herencia
+    Funcionalidad similar
+    Funciones propias
+    Categoria grande
+    Representacion conjunto grande
+    Polimorfismo: Heredar funcionalidad del padre pero esta se modifica segun el hijo
+
+Constructor
+    Metodo constructor
+    Funcion contructora = Clase():
+    Lleva el mismo nombre de la Clase
+    Es publico
+    public <NombredeLaClase>(){}
+    por defecto esta vacio
+    Se pueden crear varios > Polimorfismo
+        Sobrecargar el metodo
+
+Metodo void
+    Solo ejecuta las instrucciones dentro de su alcance (espacio de trabajo)
+
+Metodos con retorno
+    Obligacion de devolver un valor
+
+variable vacia != null
+
+null > No existe en la RAM
+
+valores por defecto de las variables sin inicializar
+ tipo objeto = null
+ primitivo = valor neutro
+
+No hacer operaciones en el return
+
+
+funciones
+    Con retorno
+    Sin retorno = void
+
+Constructores
+    Disparador
+    Llamado incial
+    Funcion contructora de la clase
+    Lleva el mismo nombre de la clase
+    polimorfismo
+    Usos:
+        Inicializar variables
+        Funcion expecifica durante la instanciacion de la clase
+
+Encapsulamiento > Variables privadas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Video 4: 0:55:00

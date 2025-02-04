@@ -1,0 +1,19 @@
+///crear clase
+// metodo sumar retorno resultado de la suma
+// invocar la funcion sumar en el Main
+// metodo restar retorno resultado de la suma
+// invocar la funcion restar en el Main ...............
+
+
+
+//sumar Tipo double
+//devolver el resultado de la operación   ======     +  double resultado = numero1+numero2
+
+//restar Tipo double
+//devolver el resultado de la operación   ======     -  double resultado = numero1-numeron2
+
+//multiplicar Tipo double
+//devolver el resultado de la operación   ======     *   double resultado = multiplo*multiplicador
+
+//dividir Tipo double
+//devolver el resultado de la operación   ======    /    double resultado = numerador/demominador
