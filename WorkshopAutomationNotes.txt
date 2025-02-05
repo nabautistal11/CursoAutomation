@@ -340,6 +340,7 @@ Herencia
     Heredar a otra clase
     Conjunto mas grande > papa
     Universo
+    Abstraccion de los metodos comunes y atributos
 
 
 
@@ -368,4 +369,5 @@ Herencia
 
 
 
-Video 4: 0:55:00
+
+Video 5: 0:15:50
