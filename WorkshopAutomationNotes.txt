@@ -336,6 +336,13 @@ Constructores
 Encapsulamiento > Variables privadas
 
 
+Herencia
+    Heredar a otra clase
+    Conjunto mas grande > papa
+    Universo
+
+
+
 
 
 
