@@ -28,4 +28,9 @@ public class Vehiculo {
     public void setMarca(String marca) {
         this.marca = marca;
     }
+
+    public boolean encender() {
+        // Implementación del encendido del vehículo
+        return true;
+    }
 }

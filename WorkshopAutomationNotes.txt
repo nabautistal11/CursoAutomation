@@ -344,6 +344,9 @@ Herencia
     Para evitar redundancia
 
 
+Polimorfismo
+    Adaptacion
+    Un objeto que cambia de forma
 
 
 
@@ -372,4 +375,4 @@ Herencia
 
 
 
-Video 5: 0:15:50
+Video 5: 0:45:00

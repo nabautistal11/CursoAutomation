@@ -5,6 +5,13 @@ public class Main {
         Auto a = new Auto();
         a.setColor("Blanco");
 
+        Vehiculo v = new Vehiculo();
+
+        Moto m = new Moto();
+        boolean encender = m.encender();
+        System.out.println(encender);
+
+
     }
 
 }
